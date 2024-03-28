@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Parseoid</title>
+
+    <%= csp_meta_tag %>
+
+    <% if Rails.env.test? %>
+      <!-- This is hack because from some reason csrf-token missing in the source under Chrome -->
+      <meta name="csrf-token" content="Cvc_TLsC0dJPB-ObgcC2MV7wExUS3NlZav4hXXGKQAhzx-h1tZSN3zTsiSqLFarefqZugPcJrlWkqHUomyPGVQ" />
+    <% else %>
+      <%= csrf_meta_tags %>
+    <% end %>
+
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <%= turbo_refreshes_with method: :morph, scroll: :preserve %>
+
+    <%= yield :head %>
+  </head>
+
+  <body class="bg-gray-100 p-8 flex flex-col min-h-screen">
+    <header class="text-center mb-8">
+      <%= image_tag "logo.svg", class: "h-40 mx-auto" %>
+      <h1 class="text-xl text-center">Parseoid</h1>
+    </header>
+    <main class="flex-grow">
+      <div class="flex flex-col items-center">
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="bg-gray-100 text-center mt-6 text-xs">
+      <%= render_date_template "Today is #m#/#d#/#y#. Leading through magic of parsing, to be #1!", Date.today %>
+    </footer>
+  </body>
+</html>

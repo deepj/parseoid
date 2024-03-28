@@ -1,0 +1,22 @@
+<div class="w-full max-w-md px-4">
+  <%= render "parser/preview_block" %>
+
+  <div class="bg-white p-4 rounded-lg shadow">
+    <div data-controller="character-counter">
+
+      <%= form_with data: { controller: "live-elements" } do |form| %>
+        <%= form.text_area :content, maxlength: 1000, autofocus: true, class: "w-full px-3 py-2 border border-blue-500 rounded focus:outline-none focus:border-blue-700",
+          data: { character_counter_target: 'input', action: { input: preview_path } } %>
+
+        <p class="text-xs text-gray-600 mt-2 text-right">
+          <span data-character-counter-target="output">0</span>
+        </p>
+
+        <div class="p-4 text-center">
+          <%= form.date_field :date, class: 'border border-blue-500 rounded focus:outline-none focus:border-blue-700',
+            data: { action: { input: preview_path } } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
