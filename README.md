@@ -1,10 +1,10 @@
 # Parseoid
 
-![Parseoid](app/assets/images/parseoid.svg)
+<img src="/app/assets/images/logo.svg" height="200px"/>
 
-[Demo](https://parseoid.onrender.com/)
+[Demo](https://parseoid.onrender.com/) _(hosted on free tier and relaunching might take some time)_
 
-The assignment entails developing a feature for dynamically adjusting dates within text lines of templates. This includes parsing and modifying date variables (#d# for day, #m# for month, #y# for year) based on a given reference date, allowing both arithmetic operations and various formats.
+The assignment entails developing a feature for dynamically adjusting dates within text lines of templates. This includes parsing and modifying date variables (**#d#** for day, **#m#** for month, **#y#** for year) based on a given reference date, allowing both arithmetic operations and various formats.
 
 ## Quickstart
 
@@ -18,9 +18,9 @@ The application is based on [Ruby on Rails](https://rubyonrails.org/) framework.
 
 1. Clone the repository
 
-  ```bash
-  git clone https://github.com/deepj/parseoid.git
-  ```
+    ```bash
+    git clone https://github.com/deepj/parseoid.git
+    ```
 
 2. Install dependencies using Bundler
 
@@ -39,9 +39,9 @@ The application is based on [Ruby on Rails](https://rubyonrails.org/) framework.
 
 The application uses default Rails testing framework based on [Minitest](https://guides.rubyonrails.org/testing.html). You can run the tests by executing the following command:
 
-    ```bash
-    bin/rails test test:system
-    ```
+```bash
+bin/rails test test:system
+```
 
 ## Deployment
 
