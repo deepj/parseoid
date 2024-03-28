@@ -69,6 +69,20 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Cache assets
+        uses: actions/cache@v2.1.5
+        with:
+          path: |
+            public/assets
+          key: asset-cache-${{ runner.os }}-${{ github.ref }}-${{ github.sha }}
+          restore-keys: |
+            asset-cache-${{ runner.os }}-${{ github.ref }}-${{ github.sha }}
+            asset-cache-${{ runner.os }}-${{ github.ref }}-
+            asset-cache-${{ runner.os }}-
+
+      - name: Precompile assets
+        run: bin/rails assets:precompile
+
       - name: Run tests
         env:
           RAILS_ENV: test
