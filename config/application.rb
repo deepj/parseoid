@@ -11,7 +11,7 @@ require "action_controller/railtie"
 # require "action_mailbox/engine"
 # require "action_text/engine"
 require "action_view/railtie"
-# require "action_cable/engine"
+require "action_cable/engine" # Enabled temporarily due https://github.com/hotwired/turbo-rails/pull/601
 require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
