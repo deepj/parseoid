@@ -27,7 +27,7 @@ module DateVariableParser
     attr_accessor :tokens, :buffer, :collected_date_parts
 
     def handle_syntax(syntax)
-      return unless syntax
+      return false unless syntax
 
       type, modifier = syntax.match(/#([dmy])([+-]?\d*)?#/).captures
       normalized_type = DATE_PARTS[type]
@@ -42,13 +42,15 @@ module DateVariableParser
     end
 
     def handle_text(text)
-      return unless text
+      return false unless text
 
       if !buffer.empty? && buffer.last.type == :text
         buffer.last.value += text
       else
         buffer << Token.new(:text, text)
       end
+
+      true
     end
 
     def flush_buffer
