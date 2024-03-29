@@ -45,7 +45,7 @@ bin/rails test test:system
 
 ## Deployment
 
-The application is deployed on ]Render](https://render.com). The deployment is done automatically on every push to the master branch if CI workflow passes. The CI workflow is defined in ./.github/workflows/ci.yml. The currently is no option to make a deploy on Render manually from a terminal.
+The application is deployed on [Render](https://render.com). The deployment is done automatically on every push to the master branch if CI workflow passes. The CI workflow is defined in ./.github/workflows/ci.yml. The currently is no option to make a deploy on Render manually from a terminal.
 
 ## Useful links
 
