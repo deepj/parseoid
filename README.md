@@ -40,7 +40,12 @@ The application is based on [Ruby on Rails](https://rubyonrails.org/) framework.
 The application uses default Rails testing framework based on [Minitest](https://guides.rubyonrails.org/testing.html). You can run the tests by executing the following command:
 
 ```bash
-bin/rails test test:system
+bin/rails test
+```
+For system tests
+
+```bash
+bin/rails test:system
 ```
 
 ## Deployment
