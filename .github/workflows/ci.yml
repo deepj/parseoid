@@ -70,7 +70,7 @@ jobs:
           bundler-cache: true
 
       - name: Cache assets
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v4.0.2
         with:
           path: |
             public/assets
