@@ -32,7 +32,7 @@ module DateVariableParser
       type, modifier = syntax.match(/#([dmy])([+-]?\d*)?#/).captures
       normalized_type = DATE_PARTS[type]
 
-      # If duplicated date part is encountered, it ends token and flush what has been collected so far
+      # If duplicated date part is encountered, it ends token and flushes what has been collected so far
       flush_buffer if collected_date_parts.include?(normalized_type)
 
       buffer << Token.new(normalized_type, modifier.presence || "0")

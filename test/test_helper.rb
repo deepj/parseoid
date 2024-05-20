@@ -9,7 +9,7 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
     def assert_tokens(tokens, expected, message = nil)
-      tokens_inspect = tokens.present? ? tokens.map(&:to_s).join : tokens.to_s
+      tokens_inspect = tokens.present? ? tokens.map(&:to_s).join(", ") : tokens.to_s
       message ||= "Expected: #{expected}\n  Actual: #{tokens_inspect}\n"
 
       assert_equal tokens_inspect, expected, message
