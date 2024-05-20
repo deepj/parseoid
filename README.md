@@ -2,7 +2,7 @@
 
 <img src="/app/assets/images/logo.svg" height="200px"/>
 
-[Demo](https://parseoid.onrender.com/) _(hosted on free tier and relaunching might take some time)_
+[Demo](https://parseoid.onrender.com/) _(hosted on Render.com free tier and relaunching might take some time)_
 
 The assignment entails developing a feature for dynamically adjusting dates within text lines of templates. This includes parsing and modifying date variables (**#d#** for day, **#m#** for month, **#y#** for year) based on a given reference date, allowing both arithmetic operations and various formats.
 
