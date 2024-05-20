@@ -19,4 +19,20 @@
       </div>
     <% end %>
   </div>
+
+  <br />
+
+  <div class="bg-white p-4 rounded-lg shadow mt-4 text-sm">
+    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+      <li><strong>#d#</strong> - day of the given reference date</li>
+      <li><strong>#m#</strong> - month number of the given reference date</li>
+      <li><strong>#y#</strong> - full year of the given reference date (e.g., 2021)</li>
+    </ul>
+    <p class="mt-2 text-gray-700">
+      You can add or subtract numbers from these variables to adjust the date in the text line relative to the given reference date.
+    </p>
+    <p class="mt-2 text-gray-700">
+      <strong>Example:</strong> If the reference date is March 1, 2021, and the text format is <code>#d-1#. #m+1#. #y+1#</code>, the resulting date will be March 31, 2022 as 31. 03. 2022.
+    </p>
+  </div>
 </div>
