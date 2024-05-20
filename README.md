@@ -12,7 +12,7 @@ The application is based on [Ruby on Rails](https://rubyonrails.org/) framework.
 
 ### Prerequisites
 
-- Ruby 3.3.0 (not tested with older Ruby 3.x versions)
+- Ruby 3.3.1 (not tested with older Ruby 3.x versions)
 
 ### Running the application
 
