@@ -5,8 +5,8 @@ class ParserController < ApplicationController
   end
 
   def preview
-    @content = params[:content]
-    @date = Date.parse(params[:date]) rescue nil
+    @content = params[:content].presence || "Textual magic loading... Preview to enchant shortly."
+    @date = helpers.date_from_params(params[:date])
 
     respond_to do |format|
       format.html { redirect_to root_path }

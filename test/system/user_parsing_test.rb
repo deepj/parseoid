@@ -4,7 +4,7 @@ require "application_system_test_case"
 
 class UserParsingTest < ApplicationSystemTestCase
   test "parser interprets date variables correctly" do
-    visit root_url # Nahraďte root_url skutečnou cestou k vaší testované stránce
+    visit root_url
 
     fill_in "date", with: "2024-03-28"
     fill_in "content", with: "Company for the period from #d-2#. #m-1#. #y-1# to #d-3#. #m+1#. #y+1#"
