@@ -2,15 +2,15 @@
 
 class ParserHelperTest < ActionView::TestCase
   test "parses date from params" do
-    date = date_from_params("2024-03-28")
+    date = date_from_param("2024-03-28")
 
     assert_equal Date.new(2024, 3, 28), date
   end
 
   test "parser returns nil for invalid params" do
-    assert_nil date_from_params("invalid")
-    assert_nil date_from_params("")
-    assert_nil date_from_params("2024-13-28")
+    assert_nil date_from_param("invalid")
+    assert_nil date_from_param("")
+    assert_nil date_from_param("2024-13-28")
   end
 
   test "renders date template" do

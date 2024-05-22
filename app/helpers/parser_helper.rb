@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ParserHelper
-  def date_from_params(param)
+  def date_from_param(param)
     Date.parse(param)
   rescue Date::Error
     nil
